@@ -5,15 +5,13 @@ from scipy import stats
 from multipy import fdr
 from tqdm import tqdm
 import sys
-sys.path.append("~/sean/resources/")
+sys.path.append("/Home/ii/seanb/sean/resources/")
 from common_functions import flip_df
 
 #import GRN eigengenes
 eig=pd.read_csv('~/sean/INTRePID/STARNET/gene_expression/eigengenes/eigengene_mat.csv', delimiter=',')
 
 #obtain randomly permutated eigengenes
-#eig_rand_mat=np.random.permutation(eig.values.flatten()).reshape(eig.shape)
-#eig_rand=pd.DataFrame(eig_rand_mat, index=eig.index, columns=eig.columns).reset_index()
 eig_rand=eig.drop('starnet_id', axis=1).sample(frac=1, random_state=0).reset_index(drop=True)
 eig_rand.insert(0, 'starnet_id', eig['starnet_id'])
 
