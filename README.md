@@ -6,5 +6,5 @@
 
 * 974 unique proteins have been measured in blood plasma for 535 patients using the Olink Target96 platform.
 
-* This repository was created to accompany the paper "Plasma proteins are integral to gene-regulatory networks acting within and across blood cells, the arterial wall and major metabolic organs".
+* This repository was created to accompany the paper "Plasma proteins are integral to cross-tissue gene-regulatory networks implicated in cardiometabolic disorders".
 
